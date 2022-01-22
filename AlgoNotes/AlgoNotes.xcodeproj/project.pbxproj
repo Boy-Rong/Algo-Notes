@@ -14,7 +14,8 @@
 		ECB6379C27990842003C2F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB6379B27990842003C2F43 /* Assets.xcassets */; };
 		ECB6379F27990842003C2F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB6379D27990842003C2F43 /* LaunchScreen.storyboard */; };
 		ECB637AA27990843003C2F43 /* AlgoNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637A927990843003C2F43 /* AlgoNotesTests.swift */; };
-		ECB637C5279908FE003C2F43 /* 链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637C4279908FE003C2F43 /* 链表.swift */; };
+		ECB637C5279908FE003C2F43 /* 翻转链表链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637C4279908FE003C2F43 /* 翻转链表链表.swift */; };
+		ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637C627992A17003C2F43 /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,8 @@
 		ECB637A027990842003C2F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECB637A527990843003C2F43 /* AlgoNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB637A927990843003C2F43 /* AlgoNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoNotesTests.swift; sourceTree = "<group>"; };
-		ECB637C4279908FE003C2F43 /* 链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "链表.swift"; sourceTree = "<group>"; };
+		ECB637C4279908FE003C2F43 /* 翻转链表链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "翻转链表链表.swift"; sourceTree = "<group>"; };
+		ECB637C627992A17003C2F43 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,7 @@
 		ECB637C2279908B8003C2F43 /* leetcode */ = {
 			isa = PBXGroup;
 			children = (
-				ECB637C4279908FE003C2F43 /* 链表.swift */,
+				ECB637C827992A3A003C2F43 /* LinkedList */,
 			);
 			path = leetcode;
 			sourceTree = "<group>";
@@ -114,6 +116,15 @@
 				ECB6379D27990842003C2F43 /* LaunchScreen.storyboard */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		ECB637C827992A3A003C2F43 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				ECB637C627992A17003C2F43 /* LinkedList.swift */,
+				ECB637C4279908FE003C2F43 /* 翻转链表链表.swift */,
+			);
+			path = LinkedList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB6379727990840003C2F43 /* ViewController.swift in Sources */,
-				ECB637C5279908FE003C2F43 /* 链表.swift in Sources */,
+				ECB637C5279908FE003C2F43 /* 翻转链表链表.swift in Sources */,
+				ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */,
 				ECB6379327990840003C2F43 /* AppDelegate.swift in Sources */,
 				ECB6379527990840003C2F43 /* SceneDelegate.swift in Sources */,
 			);
