@@ -8,6 +8,8 @@
 import Foundation
 
 
+typealias Node = LinkedNode<Int>
+
 // https://leetcode-cn.com/problems/reverse-linked-list/
 // MARK: - 翻转链表
 
@@ -85,4 +87,4 @@ func removeElements(_ head: Node?, _ val: Int) -> Node? {
     }
     
     return head
-} 
+}

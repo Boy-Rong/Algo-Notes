@@ -16,6 +16,8 @@
 		ECB637AA27990843003C2F43 /* AlgoNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637A927990843003C2F43 /* AlgoNotesTests.swift */; };
 		ECB637C5279908FE003C2F43 /* 翻转链表链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637C4279908FE003C2F43 /* 翻转链表链表.swift */; };
 		ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637C627992A17003C2F43 /* LinkedList.swift */; };
+		ECB637CA279C5079003C2F43 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637C9279C5079003C2F43 /* DoublyLinkedList.swift */; };
+		ECB637CC279C5375003C2F43 /* CircularLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB637CB279C5375003C2F43 /* CircularLinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		ECB637A927990843003C2F43 /* AlgoNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoNotesTests.swift; sourceTree = "<group>"; };
 		ECB637C4279908FE003C2F43 /* 翻转链表链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "翻转链表链表.swift"; sourceTree = "<group>"; };
 		ECB637C627992A17003C2F43 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		ECB637C9279C5079003C2F43 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		ECB637CB279C5375003C2F43 /* CircularLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 			children = (
 				ECB637C627992A17003C2F43 /* LinkedList.swift */,
 				ECB637C4279908FE003C2F43 /* 翻转链表链表.swift */,
+				ECB637C9279C5079003C2F43 /* DoublyLinkedList.swift */,
+				ECB637CB279C5375003C2F43 /* CircularLinkedList.swift */,
 			);
 			path = LinkedList;
 			sourceTree = "<group>";
@@ -229,8 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB6379727990840003C2F43 /* ViewController.swift in Sources */,
+				ECB637CA279C5079003C2F43 /* DoublyLinkedList.swift in Sources */,
 				ECB637C5279908FE003C2F43 /* 翻转链表链表.swift in Sources */,
 				ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */,
+				ECB637CC279C5375003C2F43 /* CircularLinkedList.swift in Sources */,
 				ECB6379327990840003C2F43 /* AppDelegate.swift in Sources */,
 				ECB6379527990840003C2F43 /* SceneDelegate.swift in Sources */,
 			);

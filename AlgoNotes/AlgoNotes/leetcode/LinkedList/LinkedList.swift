@@ -9,11 +9,27 @@ import Foundation
 
 // MARK: - 链表基础结构
 
-class LinkedList {
+protocol LinkedNodeable : AnyObject {
+    associatedtype Element: Equatable
+    associatedtype Node: LinkedNodeable
+    
+    var element: Element { get }
+    var next: Node? { get }
+}
+
+protocol LinkedListable {
+    associatedtype Element: Equatable
+    
+    func add(element: Element, in index: Int)
+    
+    func remove(at index: Int)
+    
+    func get(_ index: Int) -> Element?
     
 }
 
-class LinkedNode<Element: Equatable> {
+// MARK: - LinkedList
+class LinkedNode<Element: Equatable>: LinkedNodeable {
     var element: Element
     var next: LinkedNode<Element>?
     
@@ -23,4 +39,11 @@ class LinkedNode<Element: Equatable> {
     }
 }
 
-typealias Node = LinkedNode<Int>
+
+
+
+class LinkedList {
+    
+}
+
+
