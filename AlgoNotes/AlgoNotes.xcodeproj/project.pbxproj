@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B100279EEB5500043327 /* BinaryTree.swift */; };
+		EC95B104279EF47A00043327 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B103279EF47A00043327 /* Queue.swift */; };
+		EC95B10727A1615A00043327 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B10627A1615A00043327 /* Stack.swift */; };
 		ECB6379327990840003C2F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB6379227990840003C2F43 /* AppDelegate.swift */; };
 		ECB6379527990840003C2F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB6379427990840003C2F43 /* SceneDelegate.swift */; };
 		ECB6379727990840003C2F43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB6379627990840003C2F43 /* ViewController.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC95B100279EEB5500043327 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		EC95B103279EF47A00043327 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		EC95B10627A1615A00043327 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		ECB6378F27990840003C2F43 /* AlgoNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgoNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB6379227990840003C2F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECB6379427990840003C2F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC95B0FF279EEB3C00043327 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				EC95B100279EEB5500043327 /* BinaryTree.swift */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		EC95B102279EF46C00043327 /* LinearTable */ = {
+			isa = PBXGroup;
+			children = (
+				EC95B103279EF47A00043327 /* Queue.swift */,
+				EC95B10627A1615A00043327 /* Stack.swift */,
+			);
+			path = LinearTable;
+			sourceTree = "<group>";
+		};
 		ECB6378627990840003C2F43 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +127,8 @@
 		ECB637C2279908B8003C2F43 /* leetcode */ = {
 			isa = PBXGroup;
 			children = (
+				EC95B102279EF46C00043327 /* LinearTable */,
+				EC95B0FF279EEB3C00043327 /* Tree */,
 				ECB637C827992A3A003C2F43 /* LinkedList */,
 			);
 			path = leetcode;
@@ -234,12 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */,
 				ECB6379727990840003C2F43 /* ViewController.swift in Sources */,
 				ECB637CA279C5079003C2F43 /* DoublyLinkedList.swift in Sources */,
 				ECB637C5279908FE003C2F43 /* 翻转链表链表.swift in Sources */,
 				ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */,
 				ECB637CC279C5375003C2F43 /* CircularLinkedList.swift in Sources */,
+				EC95B10727A1615A00043327 /* Stack.swift in Sources */,
 				ECB6379327990840003C2F43 /* AppDelegate.swift in Sources */,
+				EC95B104279EF47A00043327 /* Queue.swift in Sources */,
 				ECB6379527990840003C2F43 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
