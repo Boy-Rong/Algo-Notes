@@ -127,27 +127,6 @@ extension BinaryTree {
         }
     }
     
-    
-    /// 翻转链表
-    func invertBinaryTree() -> BinaryTreeNode<Element>? {
-        
-        func invertBinaryTree(node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
-            guard let currentNode = node else {
-                return nil
-            }
-            
-            let left = invertBinaryTree(node: currentNode.leftNode)
-            let right = invertBinaryTree(node: currentNode.rightNode)
-            
-            currentNode.leftNode = right
-            currentNode.rightNode = left
-            
-            return currentNode
-        }
-        
-        return invertBinaryTree(node: rootNode)
-    }
-    
 }
 
 // MARK: - 迭代遍历方法
@@ -219,4 +198,90 @@ extension BinaryTree {
         
     }
 
+}
+
+extension BinaryTree {
+    /// 翻转链表
+    func invertBinaryTree() -> BinaryTreeNode<Element>? {
+        
+        func invertBinaryTree(node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
+            guard let currentNode = node else {
+                return nil
+            }
+            
+            let left = invertBinaryTree(node: currentNode.leftNode)
+            let right = invertBinaryTree(node: currentNode.rightNode)
+            
+            currentNode.leftNode = right
+            currentNode.rightNode = left
+            
+            return currentNode
+        }
+        
+        return invertBinaryTree(node: rootNode)
+    }
+}
+
+extension BinaryTree {
+    
+    /// 找前驱节点，前一个小的节点
+    func predecessorNode(_ node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
+        guard let node = node else {
+            return nil
+        }
+        
+        // leftNode == nil 的根节点
+        if node.leftNode == nil && node.parentNode == nil {
+            return nil
+        }
+        
+        if node.leftNode != nil {
+            var current = node.leftNode
+            while current?.rightNode != nil {
+                current = current?.rightNode
+            }
+            return current
+        }
+        
+        // left == nil && parentNode != nil
+        var currentNode: BinaryTreeNode<Element>? = node
+        
+        // currentNode 是 rihgtNode 结束遍历，此时 rightNode.parentNode 一定比 node 小（因为是二叉搜索树）
+        while currentNode?.parentNode != nil && currentNode === currentNode?.parentNode?.leftNode {
+            currentNode = currentNode?.parentNode
+        }
+        
+        return currentNode?.parentNode
+    }
+    
+    /// 后继节点，后一个大的节点
+    func successorNode(_ node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
+        guard let node = node else {
+            return nil
+        }
+        
+        if node.rightNode == nil && node.parentNode == nil {
+            return nil
+        }
+        
+        if node.rightNode != nil {
+            var currentNode = node.rightNode
+            
+            while currentNode?.leftNode != nil {
+                currentNode = currentNode?.leftNode
+            }
+            
+            return currentNode
+        }
+        
+        // right == nil && parentNode != nil
+        var currentNode: BinaryTreeNode<Element>? = node
+        
+        while currentNode?.parentNode != nil && currentNode === currentNode?.parentNode?.rightNode {
+            currentNode = currentNode?.parentNode
+        }
+        
+        return currentNode?.parentNode
+    }
+    
 }
