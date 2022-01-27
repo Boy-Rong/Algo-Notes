@@ -25,40 +25,8 @@ class BinaryTree<Element: Equatable> {
     
 }
 
+// MARK: - 基本遍历方法
 extension BinaryTree {
-    
-    // 迭代前序遍历
-    func iterativePreorderTraversal() {
-        
-        let action: (Element) -> Void = { value in
-            debugPrint(value)
-        }
-        
-        let currentNode = rootNode
-        var leftNode = currentNode?.leftNode
-        var rightNode = currentNode?.rightNode
-        
-        if let node = currentNode {
-            action(node.element)
-        }
-        
-        while leftNode != nil {
-            if let node = leftNode {
-                action(node.element)
-            }
-            
-            leftNode = leftNode?.leftNode
-        }
-        
-        while rightNode != nil {
-            if let right = rightNode {
-                action(right.element)
-            }
-            
-            rightNode = rightNode?.rightNode
-        }
-                
-    }
     
     func preorderTraversal() {
         
@@ -160,6 +128,7 @@ extension BinaryTree {
     }
     
     
+    /// 翻转链表
     func invertBinaryTree() -> BinaryTreeNode<Element>? {
         
         func invertBinaryTree(node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
@@ -179,4 +148,75 @@ extension BinaryTree {
         return invertBinaryTree(node: rootNode)
     }
     
+}
+
+// MARK: - 迭代遍历方法
+extension BinaryTree {
+    
+    /// 迭代前序遍历
+    func iterativePreorderTraversal() {
+        
+        // 迭代前序遍历
+        func iterativePreorderTraversal(node: BinaryTreeNode<Element>?, action: (Element) -> Void) {
+            guard let currentNode = node else {
+                return
+            }
+            
+            // 利用栈 先进后出
+            var stack: Stack<BinaryTreeNode<Element>> = .init([currentNode])
+            
+            while !stack.isEmpty {
+                let node = stack.pop()
+                action(node.element)
+                
+                if let right = node.rightNode {
+                    stack.push(right)
+                }
+                
+                if let left = node.leftNode {
+                    stack.push(left)
+                }
+            }
+            
+        }
+        
+        iterativePreorderTraversal(node: rootNode, action: { value in
+            debugPrint(value)
+        })
+    }
+    
+    func iterativeInorderTraversal() {
+        
+        /// 模版方法
+        func iterativeInorderTraversal(node: BinaryTreeNode<Element>?, action: (Element) -> Void) {
+            guard node != nil else {
+                return
+            }
+            
+            // 利用栈 先进后出
+            var stack: Stack<BinaryTreeNode<Element>> = .init()
+            
+            var currentNode = node
+            
+            while !stack.isEmpty || currentNode != nil {
+                // 先将left节点全部入栈
+                while currentNode != nil {
+                    if let node = currentNode {
+                        stack.push(node)
+                        currentNode = currentNode?.leftNode
+                    }
+                }
+                
+                let topNode = stack.pop()
+                action(topNode.element)
+                currentNode = topNode.rightNode
+            }
+        }
+        
+        iterativeInorderTraversal(node: rootNode, action: { value in
+            debugPrint(value)
+        })
+        
+    }
+
 }
