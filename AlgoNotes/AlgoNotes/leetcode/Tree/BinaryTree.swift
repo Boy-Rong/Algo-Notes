@@ -7,106 +7,215 @@
 
 import Foundation
 
-class BinaryTreeNode<Element: Equatable> {
-    var element: Element
-    var leftNode: BinaryTreeNode<Element>?
-    var rightNode: BinaryTreeNode<Element>?
-    var parentNode: BinaryTreeNode<Element>?
+///// 节点协议
+//public protocol BinaryTreeNodeable: AnyObject {
+//    associatedtype Element
+//    var element: Element { set get }
+//    var leftNode: Self? { set get }
+//    var rightNode: Self? { set get }
+//    var parentNode: Self? { set get }
+//}
+
+/// 二叉树节点
+public class BinaryTreeNode<Element> {
+    public var element: Element
+    public var leftNode: BinaryTreeNode<Element>?
+    public var rightNode: BinaryTreeNode<Element>?
+    public var parentNode: BinaryTreeNode<Element>?
     
-    init(element: Element) {
+    public init(element: Element) {
         self.element = element
     }
+    
+    var isLeftNode: Bool {
+        self === parentNode?.leftNode
+    }
+    
+    var isRightNode: Bool {
+        self === parentNode?.rightNode
+    }
+    
+    /// 叶子节点
+    var isLeafNode: Bool {
+        leftNode == nil && rightNode == nil
+    }
+    
+    /// 度为1的节点
+    var isSignleNode: Bool {
+        (leftNode == nil && rightNode != nil) || (leftNode != nil && rightNode == nil)
+    }
+    
+    /// 度为2的节点
+    var isBinaryNode: Bool {
+        parentNode?.leftNode != nil && parentNode?.rightNode != nil
+    }
+}
+
+/// 二叉树基本协议
+public protocol BinaryTreeable: AnyObject {
+    associatedtype Element
+    typealias Node = BinaryTreeNode<Element>
+        
+    var rootNode: Node? { set get }
+    
+    var count: Int { set get }
+    
+    var isEmpty: Bool { get }
+    
+    func contains(_ node: Node) -> Bool
+    
+    func clear()
+}
+
+extension BinaryTreeable {
+    
+    public var isEmpty: Bool {
+        count == 0
+    }
+    
+    public func contains(_ node: Node) -> Bool {
+        var isContains = false
+        levelOrderTraversal(node: rootNode, action: { current, depth in
+            if node === current {
+                isContains = true
+            }
+        })
+        
+        return isContains
+    }
+    
+    public func clear() {
+        var nodeList: [Node] = []
+        inorderTraversal(node: rootNode) { nodeList.append($0) }
+        
+        // 将节点的所有引用打断，避免循环引用
+        for node in nodeList {
+            node.parentNode = nil
+            node.leftNode = nil
+            node.rightNode = nil
+        }
+        
+        rootNode = nil
+        count = 0
+    }
+    
 }
 
 
-class BinaryTree<Element: Equatable> {
+// MARK: - 递归遍历
+extension BinaryTreeable {
     
-    var rootNode: BinaryTreeNode<Element>?
+    /// 前序遍历
+    func preorderTraversal(node: Node?, action: (Node) -> Void) {
+        guard let currentNode = node else {
+            return
+        }
+        
+        // parent
+        action(currentNode)
+        
+        // left
+        preorderTraversal(node: currentNode.leftNode, action: action)
+        
+        // right
+        preorderTraversal(node: currentNode.rightNode, action: action)
+    }
+    
+    /// 中序遍历
+    func inorderTraversal(node: Node?, action: (Node) -> Void) {
+        guard let currentNode = node else {
+            return
+        }
+        
+        inorderTraversal(node: node?.leftNode, action: action)
+        
+        action(currentNode)
+        
+        inorderTraversal(node: node?.rightNode, action: action)
+    }
+    
+    /// 后序遍历
+    func postorderTraversal(node: Node?, action: (Node) -> Void) {
+        guard let currentNode = node else {
+            return
+        }
+        
+        postorderTraversal(node: currentNode.leftNode, action: action)
+        
+        postorderTraversal(node: currentNode.rightNode, action: action)
+
+        action(currentNode)
+    }
     
 }
 
-// MARK: - 基本遍历方法
-extension BinaryTree {
+// MARK: - 迭代遍历
+extension BinaryTreeable {
     
-    func preorderTraversal() {
-        
-        func preorderTraversal(node: BinaryTreeNode<Element>?, action: (Element) -> Void) {
-            guard let currentNode = node else {
-                return
-            }
-            
-            // parent
-            action(currentNode.element)
-            
-            // left
-            preorderTraversal(node: currentNode.leftNode, action: action)
-            
-            // right
-            preorderTraversal(node: currentNode.rightNode, action: action)
+    // 迭代前序遍历
+    func iterativePreorderTraversal(node: Node?, action: (Node) -> Void) {
+        guard let currentNode = node else {
+            return
         }
         
-        preorderTraversal(node: rootNode, action: { value in
-            debugPrint(value)
-        })
-    }
-    
-    func inorderTraversal() {
+        // 利用栈 先进后出
+        var stack: Stack<Node> = .init([currentNode])
         
-        func inorderTraversal(node: BinaryTreeNode<Element>?, action: (Element) -> Void) {
-            guard let currentNode = node else {
-                return
+        while !stack.isEmpty {
+            let node = stack.pop()
+            action(node)
+            
+            if let right = node.rightNode {
+                stack.push(right)
             }
             
-            inorderTraversal(node: node?.leftNode, action: action)
-            
-            action(currentNode.element)
-            
-            inorderTraversal(node: node?.rightNode, action: action)
+            if let left = node.leftNode {
+                stack.push(left)
+            }
         }
         
-        inorderTraversal(node: rootNode, action: { value in
-            debugPrint(value)
-        })
     }
     
-    func postorderTraversal() {
+    /// 迭代中序遍历，使用的是模版方法（可用于前序、中序遍历）
+    func iterativeInorderTraversal(node: Node?, action: (Node) -> Void) {
+        guard node != nil else {
+            return
+        }
         
-        func postorderTraversal(node: BinaryTreeNode<Element>?, action: (Element) -> Void) {
-            guard let currentNode = node else {
-                return
+        // 利用栈 先进后出
+        var stack: Stack<Node> = .init()
+        
+        var currentNode = node
+        
+        while !stack.isEmpty || currentNode != nil {
+            // 先将left节点全部入栈
+            while currentNode != nil {
+                if let node = currentNode {
+                    stack.push(node)
+                    currentNode = currentNode?.leftNode
+                }
             }
             
-            postorderTraversal(node: currentNode.leftNode, action: action)
-            
-            postorderTraversal(node: currentNode.rightNode, action: action)
-
-            action(currentNode.element)
+            let topNode = stack.pop()
+            action(topNode)
+            currentNode = topNode.rightNode
         }
-        
-        postorderTraversal(node: rootNode, action: { value in
-            debugPrint(value)
-        })
     }
     
-    func levelOrderTraversal() {
-        levelOrderTraversal(node: rootNode, action: { value, _ in
-            debugPrint(value)
-        })
-    }
-    
-    func levelOrderTraversal(node: BinaryTreeNode<Element>?, action: (Element, Int) -> Void) {
+    /// 层序遍历
+    func levelOrderTraversal(node: Node?, action: (Node, Int) -> Void) {
         guard let currentNode = rootNode else {
             return
         }
         
-        var queue: Queue<BinaryTreeNode<Element>> = .init()
+        var queue: Queue<Node> = .init()
         queue.enqueue(element: currentNode)
         var depth = 1
         var depthSize = 1
         
         while !queue.isEmpty {
             if let node = queue.dequeue() {
-                action(node.element, depth)
+                action(node, depth)
                 
                 depthSize -= 1
             }
@@ -129,82 +238,12 @@ extension BinaryTree {
     
 }
 
-// MARK: - 迭代遍历方法
-extension BinaryTree {
+extension BinaryTreeable {
     
-    /// 迭代前序遍历
-    func iterativePreorderTraversal() {
+    /// 翻转链表-递归
+    func invertBinaryTree() -> Node? {
         
-        // 迭代前序遍历
-        func iterativePreorderTraversal(node: BinaryTreeNode<Element>?, action: (Element) -> Void) {
-            guard let currentNode = node else {
-                return
-            }
-            
-            // 利用栈 先进后出
-            var stack: Stack<BinaryTreeNode<Element>> = .init([currentNode])
-            
-            while !stack.isEmpty {
-                let node = stack.pop()
-                action(node.element)
-                
-                if let right = node.rightNode {
-                    stack.push(right)
-                }
-                
-                if let left = node.leftNode {
-                    stack.push(left)
-                }
-            }
-            
-        }
-        
-        iterativePreorderTraversal(node: rootNode, action: { value in
-            debugPrint(value)
-        })
-    }
-    
-    func iterativeInorderTraversal() {
-        
-        /// 模版方法
-        func iterativeInorderTraversal(node: BinaryTreeNode<Element>?, action: (Element) -> Void) {
-            guard node != nil else {
-                return
-            }
-            
-            // 利用栈 先进后出
-            var stack: Stack<BinaryTreeNode<Element>> = .init()
-            
-            var currentNode = node
-            
-            while !stack.isEmpty || currentNode != nil {
-                // 先将left节点全部入栈
-                while currentNode != nil {
-                    if let node = currentNode {
-                        stack.push(node)
-                        currentNode = currentNode?.leftNode
-                    }
-                }
-                
-                let topNode = stack.pop()
-                action(topNode.element)
-                currentNode = topNode.rightNode
-            }
-        }
-        
-        iterativeInorderTraversal(node: rootNode, action: { value in
-            debugPrint(value)
-        })
-        
-    }
-
-}
-
-extension BinaryTree {
-    /// 翻转链表
-    func invertBinaryTree() -> BinaryTreeNode<Element>? {
-        
-        func invertBinaryTree(node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
+        func invertBinaryTree(node: Node?) -> Node? {
             guard let currentNode = node else {
                 return nil
             }
@@ -220,68 +259,68 @@ extension BinaryTree {
         
         return invertBinaryTree(node: rootNode)
     }
+    
+}
+
+// MARK: - 基本二叉树
+class BinaryTree<Element>: BinaryTreeable {
+    var rootNode: BinaryTreeNode<Element>?
+    var count: Int = 0
+    
+}
+
+// MARK: - 基本遍历方法
+extension BinaryTree {
+    
+    func preorderTraversal() {
+        preorderTraversal(node: rootNode, action: { value in
+            debugPrint(value.element)
+        })
+    }
+    
+    func inorderTraversal() {
+        inorderTraversal(node: rootNode, action: { value in
+            debugPrint(value.element)
+        })
+    }
+    
+    func postorderTraversal() {
+        postorderTraversal(node: rootNode, action: { value in
+            debugPrint(value.element)
+        })
+    }
+    
+    func levelOrderTraversal() {
+        levelOrderTraversal(node: rootNode, action: { value, _ in
+            debugPrint(value.element)
+        })
+    }
+    
+}
+
+// MARK: - 迭代遍历方法
+extension BinaryTree {
+    
+    /// 迭代前序遍历
+    func iterativePreorderTraversal() {
+        
+        iterativePreorderTraversal(node: rootNode, action: { value in
+            debugPrint(value.element)
+        })
+    }
+    
+    func iterativeInorderTraversal() {
+        
+        iterativeInorderTraversal(node: rootNode, action: { value in
+            debugPrint(value.element)
+        })
+        
+    }
+
 }
 
 extension BinaryTree {
     
-    /// 找前驱节点，前一个小的节点
-    func predecessorNode(_ node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
-        guard let node = node else {
-            return nil
-        }
-        
-        // leftNode == nil 的根节点
-        if node.leftNode == nil && node.parentNode == nil {
-            return nil
-        }
-        
-        if node.leftNode != nil {
-            var current = node.leftNode
-            while current?.rightNode != nil {
-                current = current?.rightNode
-            }
-            return current
-        }
-        
-        // left == nil && parentNode != nil
-        var currentNode: BinaryTreeNode<Element>? = node
-        
-        // currentNode 是 rihgtNode 结束遍历，此时 rightNode.parentNode 一定比 node 小（因为是二叉搜索树）
-        while currentNode?.parentNode != nil && currentNode === currentNode?.parentNode?.leftNode {
-            currentNode = currentNode?.parentNode
-        }
-        
-        return currentNode?.parentNode
-    }
     
-    /// 后继节点，后一个大的节点
-    func successorNode(_ node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
-        guard let node = node else {
-            return nil
-        }
-        
-        if node.rightNode == nil && node.parentNode == nil {
-            return nil
-        }
-        
-        if node.rightNode != nil {
-            var currentNode = node.rightNode
-            
-            while currentNode?.leftNode != nil {
-                currentNode = currentNode?.leftNode
-            }
-            
-            return currentNode
-        }
-        
-        // right == nil && parentNode != nil
-        var currentNode: BinaryTreeNode<Element>? = node
-        
-        while currentNode?.parentNode != nil && currentNode === currentNode?.parentNode?.rightNode {
-            currentNode = currentNode?.parentNode
-        }
-        
-        return currentNode?.parentNode
-    }
     
 }
