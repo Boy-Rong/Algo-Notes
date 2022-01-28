@@ -7,18 +7,96 @@
 
 import Foundation
 
-// MARK: - 二叉搜索树
-public class BinarySearchTree<Element: Comparable>: BinaryTreeable {
-    typealias Node = BinaryTreeNode<Element>
+// MARK: - 二叉搜索数协议
+public protocol BinarySearchTreeable: BinaryTreeable where Node.Element : Comparable {
     
-    public var rootNode: BinaryTreeNode<Element>?
-    public var count: Int = 0
+    func append(_ element: Node.Element)
+    
+    func remove(_ element: Node.Element)
+    
+    func node(_ element: Node.Element) -> Node?
+    
+    func afterAppdend(_ node: Node?)
+    
+    func afterRemove(_ node: Node?)
+}
+
+
+// MARK: - 前驱 & 后继
+extension BinarySearchTreeable {
+    
+    /// 找前驱节点，前一个小的节点
+    func predecessorNode(_ node: Node?) -> Node? {
+        guard let node = node else {
+            return nil
+        }
+        
+        // leftNode == nil 的根节点
+        if node.leftNode == nil && node.parentNode == nil {
+            return nil
+        }
+        
+        if node.leftNode != nil {
+            var current = node.leftNode
+            while current?.rightNode != nil {
+                current = current?.rightNode
+            }
+            return current
+        }
+        
+        // left == nil && parentNode != nil
+        var currentNode: Node? = node
+        
+        // currentNode 是 rihgtNode 结束遍历，此时 rightNode.parentNode 一定比 node 小（因为是二叉搜索树）
+        while currentNode?.parentNode != nil && currentNode === currentNode?.parentNode?.leftNode {
+            currentNode = currentNode?.parentNode
+        }
+        
+        return currentNode?.parentNode
+    }
+    
+    /// 后继节点，后一个大的节点
+    func successorNode(_ node: Node?) -> Node? {
+        guard let node = node else {
+            return nil
+        }
+        
+        if node.rightNode == nil && node.parentNode == nil {
+            return nil
+        }
+        
+        if node.rightNode != nil {
+            var currentNode = node.rightNode
+            
+            while currentNode?.leftNode != nil {
+                currentNode = currentNode?.leftNode
+            }
+            
+            return currentNode
+        }
+        
+        // right == nil && parentNode != nil
+        var currentNode: Node? = node
+        
+        while currentNode?.parentNode != nil && currentNode === currentNode?.parentNode?.rightNode {
+            currentNode = currentNode?.parentNode
+        }
+        
+        return currentNode?.parentNode
+    }
+}
+
+// MARK: - 增加、删除
+extension BinarySearchTreeable {
     
     /// 添加元素
-    func append(_ element: Element) {
+    public func append(_ element: Node.Element) {
         guard rootNode == nil else {
+            
             rootNode = .init(element: element)
             count += 1
+            
+            afterAppdend(rootNode)
             return
         }
         
@@ -48,7 +126,7 @@ public class BinarySearchTree<Element: Comparable>: BinaryTreeable {
             return
         }
         
-        let node = BinaryTreeNode<Element>(element: element)
+        let node: Node = .init(element: element)
         node.parentNode = parent
         
         if element > parent.element {
@@ -59,11 +137,12 @@ public class BinarySearchTree<Element: Comparable>: BinaryTreeable {
         }
         
         count += 1
+        
+        afterAppdend(node)
     }
     
-    
     /// 移除元素
-    func remove(_ element: Element) {
+    public func remove(_ element: Node.Element) {
         guard var node = node(element) else {
             return
         }
@@ -122,13 +201,12 @@ public class BinarySearchTree<Element: Comparable>: BinaryTreeable {
         }
         
         count -= 1
+        
+        afterAppdend(node)
     }
     
-}
-
-extension BinarySearchTree {
-    
-    private func node(_ element: Element) -> Node? {
+    /// 根据元素查找节点
+    public func node(_ element: Node.Element) -> Node? {
         var current = rootNode
         
         while current != nil {
@@ -152,66 +230,18 @@ extension BinarySearchTree {
     
 }
 
-// MARK: - 前驱 & 后继
-extension BinarySearchTree {
+// MARK: - 空实现
+extension BinarySearchTreeable {
     
-    /// 找前驱节点，前一个小的节点
-    func predecessorNode(_ node: Node?) -> BinaryTreeNode<Element>? {
-        guard let node = node else {
-            return nil
-        }
-        
-        // leftNode == nil 的根节点
-        if node.leftNode == nil && node.parentNode == nil {
-            return nil
-        }
-        
-        if node.leftNode != nil {
-            var current = node.leftNode
-            while current?.rightNode != nil {
-                current = current?.rightNode
-            }
-            return current
-        }
-        
-        // left == nil && parentNode != nil
-        var currentNode: BinaryTreeNode<Element>? = node
-        
-        // currentNode 是 rihgtNode 结束遍历，此时 rightNode.parentNode 一定比 node 小（因为是二叉搜索树）
-        while currentNode?.parentNode != nil && currentNode === currentNode?.parentNode?.leftNode {
-            currentNode = currentNode?.parentNode
-        }
-        
-        return currentNode?.parentNode
-    }
+    public func afterAppdend(_ node: Node?) { }
     
-    /// 后继节点，后一个大的节点
-    func successorNode(_ node: BinaryTreeNode<Element>?) -> BinaryTreeNode<Element>? {
-        guard let node = node else {
-            return nil
-        }
-        
-        if node.rightNode == nil && node.parentNode == nil {
-            return nil
-        }
-        
-        if node.rightNode != nil {
-            var currentNode = node.rightNode
-            
-            while currentNode?.leftNode != nil {
-                currentNode = currentNode?.leftNode
-            }
-            
-            return currentNode
-        }
-        
-        // right == nil && parentNode != nil
-        var currentNode: BinaryTreeNode<Element>? = node
-        
-        while currentNode?.parentNode != nil && currentNode === currentNode?.parentNode?.rightNode {
-            currentNode = currentNode?.parentNode
-        }
-        
-        return currentNode?.parentNode
-    }
+    public func afterRemove(_ node: Node?) { }
+    
+}
+
+// MARK: - 二叉搜索树
+public class BinarySearchTree<Element: Comparable>: BinarySearchTreeable {
+    public var rootNode: BinaryTreeNode<Element>?
+    public var count: Int = 0
+    
 }

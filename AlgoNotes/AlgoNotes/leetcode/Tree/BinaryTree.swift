@@ -7,26 +7,20 @@
 
 import Foundation
 
-///// 节点协议
-//public protocol BinaryTreeNodeable: AnyObject {
-//    associatedtype Element
-//    var element: Element { set get }
-//    var leftNode: Self? { set get }
-//    var rightNode: Self? { set get }
-//    var parentNode: Self? { set get }
-//}
+// MARK: - 基本二叉树协议
+/// 二叉树节点协议
+public protocol BinaryTreeNodeable: AnyObject {
+    associatedtype Element
+    
+    var element: Element { set get }
+    var leftNode: Self? { set get }
+    var rightNode: Self? { set get }
+    var parentNode: Self? { set get }
+    
+    init(element: Element)
+}
 
-/// 二叉树节点
-public class BinaryTreeNode<Element> {
-    public var element: Element
-    public var leftNode: BinaryTreeNode<Element>?
-    public var rightNode: BinaryTreeNode<Element>?
-    public var parentNode: BinaryTreeNode<Element>?
-    
-    public init(element: Element) {
-        self.element = element
-    }
-    
+extension BinaryTreeNodeable {
     var isLeftNode: Bool {
         self === parentNode?.leftNode
     }
@@ -53,9 +47,8 @@ public class BinaryTreeNode<Element> {
 
 /// 二叉树基本协议
 public protocol BinaryTreeable: AnyObject {
-    associatedtype Element
-    typealias Node = BinaryTreeNode<Element>
-        
+    associatedtype Node: BinaryTreeNodeable
+    
     var rootNode: Node? { set get }
     
     var count: Int { set get }
@@ -263,8 +256,23 @@ extension BinaryTreeable {
 }
 
 // MARK: - 基本二叉树
-class BinaryTree<Element>: BinaryTreeable {
-    var rootNode: BinaryTreeNode<Element>?
+
+/// 二叉树节点
+public final class BinaryTreeNode<Element>: BinaryTreeNodeable {
+    public typealias Node = BinaryTreeNode<Element>
+    
+    public var element: Element
+    public var leftNode: Node?
+    public var rightNode: Node?
+    public var parentNode: Node?
+    
+    public init(element: Element) {
+        self.element = element
+    }
+}
+
+class BinaryTree<Element, Node: BinaryTreeNodeable>: BinaryTreeable {
+    var rootNode: Node?
     var count: Int = 0
     
 }
@@ -318,6 +326,7 @@ extension BinaryTree {
     }
 
 }
+
 
 extension BinaryTree {
     
