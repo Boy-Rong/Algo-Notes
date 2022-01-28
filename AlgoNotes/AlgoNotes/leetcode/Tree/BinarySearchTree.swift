@@ -169,7 +169,8 @@ extension BinarySearchTreeable {
             else {
                 node.parentNode?.rightNode = nil
             }
-            node.parentNode = nil
+            // 不能将 node.parentNode = nil，平衡时需要用到
+            //node.parentNode = nil
         }
         // 度为1的非根节点
         else if node.isSignleNode && node.parentNode != nil {
@@ -202,7 +203,7 @@ extension BinarySearchTreeable {
         
         count -= 1
         
-        afterAppdend(node)
+        afterRemove(node)
     }
     
     /// 根据元素查找节点

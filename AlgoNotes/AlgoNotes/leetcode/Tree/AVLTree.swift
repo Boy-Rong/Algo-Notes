@@ -74,7 +74,19 @@ public class AVLTree<Element: Comparable>: BinarySearchTreeable {
     }
     
     public func afterRemove(_ node: AVLTreeNode<Element>?) {
+        var current = node?.parentNode
         
+        while current != nil {
+            if current?.isBalanced ?? false {
+                updateHeight(current)
+            }
+            else {
+                // 恢复平衡后，可能上层的父节点都失去平衡，所以继续向上恢复，直到根节点
+                reBalanced(current)
+            }
+            
+            current = current?.parentNode
+        }
     }
     
 }
