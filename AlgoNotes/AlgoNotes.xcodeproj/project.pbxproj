@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC1821DA27AAAC7C002084EA /* 合并两个有序链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821D927AAAC7C002084EA /* 合并两个有序链表.swift */; };
+		EC1821DC27AABCC1002084EA /* 合并两个有序数组.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821DB27AABCC1002084EA /* 合并两个有序数组.swift */; };
 		EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B100279EEB5500043327 /* BinaryTree.swift */; };
 		EC95B104279EF47A00043327 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B103279EF47A00043327 /* Queue.swift */; };
 		EC95B10727A1615A00043327 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B10627A1615A00043327 /* Stack.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		EC1821D927AAAC7C002084EA /* 合并两个有序链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "合并两个有序链表.swift"; sourceTree = "<group>"; };
+		EC1821DB27AABCC1002084EA /* 合并两个有序数组.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "合并两个有序数组.swift"; sourceTree = "<group>"; };
 		EC95B100279EEB5500043327 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		EC95B103279EF47A00043327 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		EC95B10627A1615A00043327 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				EC1821D927AAAC7C002084EA /* 合并两个有序链表.swift */,
+				EC1821DB27AABCC1002084EA /* 合并两个有序数组.swift */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */,
 				EC95B10E27A7B79E00043327 /* BubbleSort.swift in Sources */,
 				ECB637CC279C5375003C2F43 /* CircularLinkedList.swift in Sources */,
+				EC1821DC27AABCC1002084EA /* 合并两个有序数组.swift in Sources */,
 				EC95B10727A1615A00043327 /* Stack.swift in Sources */,
 				ECB6379327990840003C2F43 /* AppDelegate.swift in Sources */,
 				EC95B11627A7B82600043327 /* QuickSort.swift in Sources */,
