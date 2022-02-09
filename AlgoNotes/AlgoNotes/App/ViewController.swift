@@ -14,7 +14,8 @@ class ViewController: UIViewController {
         
         debugPrint("<-----------------------test----------------------->")
         testDemo()
-        testLeetcode()
+//        testLeetcode()
+        testLeetcodeString()
         debugPrint("<-----------------------****----------------------->")
     }
 
@@ -34,10 +35,16 @@ class ViewController: UIViewController {
     }
     
     func testLeetcode() {
-        var nums1 = [2,0]
-        let nums2 = [1]
-        merge(&nums1, 1, nums2, 1)
-        debugPrint(nums1)
+        var list = [[1,2,3],[4,5,6],[7,8,9]]
+        rotate(&list)
+        debugPrint(list)
+    }
+    
+    func testLeetcodeString() {
+//        let value = isPalindrome("0P")
+//        let value = myAtoi("42")
+        let value = longestCommonPrefix("flower", "flow")
+        debugPrint(value)
     }
 
 }

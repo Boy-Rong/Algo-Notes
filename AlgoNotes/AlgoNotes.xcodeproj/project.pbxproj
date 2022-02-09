@@ -9,6 +9,26 @@
 /* Begin PBXBuildFile section */
 		EC1821DA27AAAC7C002084EA /* 合并两个有序链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821D927AAAC7C002084EA /* 合并两个有序链表.swift */; };
 		EC1821DC27AABCC1002084EA /* 合并两个有序数组.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821DB27AABCC1002084EA /* 合并两个有序数组.swift */; };
+		EC1821DE27AAC675002084EA /* 合并K个升序链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821DD27AAC675002084EA /* 合并K个升序链表.swift */; };
+		EC1821E027AAD0E3002084EA /* 平衡二叉树.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821DF27AAD0E3002084EA /* 平衡二叉树.swift */; };
+		EC1821E227AB6B52002084EA /* 删除排序数组中的重复项.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821E127AB6B52002084EA /* 删除排序数组中的重复项.swift */; };
+		EC1821E427AB8D1A002084EA /* 旋转数组.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821E327AB8D1A002084EA /* 旋转数组.swift */; };
+		EC1821E627ABDE70002084EA /* 存在重复元素.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821E527ABDE70002084EA /* 存在重复元素.swift */; };
+		EC1821E827AC167A002084EA /* 只出现一次的数字.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821E727AC167A002084EA /* 只出现一次的数字.swift */; };
+		EC1821EA27AD41E6002084EA /* 加一 .swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821E927AD41E6002084EA /* 加一 .swift */; };
+		EC1821EC27AE2FBD002084EA /* 移动零.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821EB27AE2FBD002084EA /* 移动零.swift */; };
+		EC1821EE27AE4E7F002084EA /* 两数和.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821ED27AE4E7F002084EA /* 两数和.swift */; };
+		EC1821F027AE6B7F002084EA /* 有效的数独.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821EF27AE6B7F002084EA /* 有效的数独.swift */; };
+		EC1821F227AE7C10002084EA /* 旋转图像.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821F127AE7C10002084EA /* 旋转图像.swift */; };
+		EC1821F427AF7DC8002084EA /* 买卖股票的最佳时机 II.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821F327AF7DC8002084EA /* 买卖股票的最佳时机 II.swift */; };
+		EC1821F827AF7F71002084EA /* 反转字符串.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821F727AF7F71002084EA /* 反转字符串.swift */; };
+		EC1821FA27AF8A24002084EA /* 整数反转.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821F927AF8A24002084EA /* 整数反转.swift */; };
+		EC1821FC27AF9B21002084EA /* 字符串中的第一个唯一字符.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821FB27AF9B21002084EA /* 字符串中的第一个唯一字符.swift */; };
+		EC1821FE27AFAD47002084EA /* 有效的字母异位词.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821FD27AFAD47002084EA /* 有效的字母异位词.swift */; };
+		EC18220027AFAFDB002084EA /* 验证回文串.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1821FF27AFAFDB002084EA /* 验证回文串.swift */; };
+		EC18220227AFBB72002084EA /* 字符串转换整数.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220127AFBB72002084EA /* 字符串转换整数.swift */; };
+		EC18220427AFDD5C002084EA /* 实现 strStr().swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220327AFDD5C002084EA /* 实现 strStr().swift */; };
+		EC18220627B1FECC002084EA /* 最长公共前缀.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220527B1FECC002084EA /* 最长公共前缀.swift */; };
 		EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B100279EEB5500043327 /* BinaryTree.swift */; };
 		EC95B104279EF47A00043327 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B103279EF47A00043327 /* Queue.swift */; };
 		EC95B10727A1615A00043327 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B10627A1615A00043327 /* Stack.swift */; };
@@ -45,6 +65,26 @@
 /* Begin PBXFileReference section */
 		EC1821D927AAAC7C002084EA /* 合并两个有序链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "合并两个有序链表.swift"; sourceTree = "<group>"; };
 		EC1821DB27AABCC1002084EA /* 合并两个有序数组.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "合并两个有序数组.swift"; sourceTree = "<group>"; };
+		EC1821DD27AAC675002084EA /* 合并K个升序链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "合并K个升序链表.swift"; sourceTree = "<group>"; };
+		EC1821DF27AAD0E3002084EA /* 平衡二叉树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "平衡二叉树.swift"; sourceTree = "<group>"; };
+		EC1821E127AB6B52002084EA /* 删除排序数组中的重复项.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "删除排序数组中的重复项.swift"; sourceTree = "<group>"; };
+		EC1821E327AB8D1A002084EA /* 旋转数组.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "旋转数组.swift"; sourceTree = "<group>"; };
+		EC1821E527ABDE70002084EA /* 存在重复元素.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "存在重复元素.swift"; sourceTree = "<group>"; };
+		EC1821E727AC167A002084EA /* 只出现一次的数字.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "只出现一次的数字.swift"; sourceTree = "<group>"; };
+		EC1821E927AD41E6002084EA /* 加一 .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "加一 .swift"; sourceTree = "<group>"; };
+		EC1821EB27AE2FBD002084EA /* 移动零.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "移动零.swift"; sourceTree = "<group>"; };
+		EC1821ED27AE4E7F002084EA /* 两数和.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "两数和.swift"; sourceTree = "<group>"; };
+		EC1821EF27AE6B7F002084EA /* 有效的数独.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "有效的数独.swift"; sourceTree = "<group>"; };
+		EC1821F127AE7C10002084EA /* 旋转图像.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "旋转图像.swift"; sourceTree = "<group>"; };
+		EC1821F327AF7DC8002084EA /* 买卖股票的最佳时机 II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "买卖股票的最佳时机 II.swift"; sourceTree = "<group>"; };
+		EC1821F727AF7F71002084EA /* 反转字符串.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "反转字符串.swift"; sourceTree = "<group>"; };
+		EC1821F927AF8A24002084EA /* 整数反转.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "整数反转.swift"; sourceTree = "<group>"; };
+		EC1821FB27AF9B21002084EA /* 字符串中的第一个唯一字符.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "字符串中的第一个唯一字符.swift"; sourceTree = "<group>"; };
+		EC1821FD27AFAD47002084EA /* 有效的字母异位词.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "有效的字母异位词.swift"; sourceTree = "<group>"; };
+		EC1821FF27AFAFDB002084EA /* 验证回文串.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "验证回文串.swift"; sourceTree = "<group>"; };
+		EC18220127AFBB72002084EA /* 字符串转换整数.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "字符串转换整数.swift"; sourceTree = "<group>"; };
+		EC18220327AFDD5C002084EA /* 实现 strStr().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "实现 strStr().swift"; sourceTree = "<group>"; };
+		EC18220527B1FECC002084EA /* 最长公共前缀.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "最长公共前缀.swift"; sourceTree = "<group>"; };
 		EC95B100279EEB5500043327 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		EC95B103279EF47A00043327 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		EC95B10627A1615A00043327 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -89,13 +129,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC1821D827AAAC63002084EA /* Exercise */ = {
+		EC1821D827AAAC63002084EA /* 初级算法 */ = {
+			isa = PBXGroup;
+			children = (
+				EC18220827B3895A002084EA /* 树 */,
+				EC18220727B3894C002084EA /* 链表 */,
+				EC1821F627AF7F58002084EA /* 字符串 */,
+				EC1821F527AF7F36002084EA /* 数组 */,
+			);
+			path = "初级算法";
+			sourceTree = "<group>";
+		};
+		EC1821F527AF7F36002084EA /* 数组 */ = {
+			isa = PBXGroup;
+			children = (
+				EC1821DB27AABCC1002084EA /* 合并两个有序数组.swift */,
+				EC1821E127AB6B52002084EA /* 删除排序数组中的重复项.swift */,
+				EC1821E327AB8D1A002084EA /* 旋转数组.swift */,
+				EC1821E527ABDE70002084EA /* 存在重复元素.swift */,
+				EC1821E727AC167A002084EA /* 只出现一次的数字.swift */,
+				EC1821E927AD41E6002084EA /* 加一 .swift */,
+				EC1821EB27AE2FBD002084EA /* 移动零.swift */,
+				EC1821ED27AE4E7F002084EA /* 两数和.swift */,
+				EC1821EF27AE6B7F002084EA /* 有效的数独.swift */,
+				EC1821F127AE7C10002084EA /* 旋转图像.swift */,
+				EC1821F327AF7DC8002084EA /* 买卖股票的最佳时机 II.swift */,
+			);
+			path = "数组";
+			sourceTree = "<group>";
+		};
+		EC1821F627AF7F58002084EA /* 字符串 */ = {
+			isa = PBXGroup;
+			children = (
+				EC1821F727AF7F71002084EA /* 反转字符串.swift */,
+				EC1821F927AF8A24002084EA /* 整数反转.swift */,
+				EC1821FB27AF9B21002084EA /* 字符串中的第一个唯一字符.swift */,
+				EC1821FD27AFAD47002084EA /* 有效的字母异位词.swift */,
+				EC1821FF27AFAFDB002084EA /* 验证回文串.swift */,
+				EC18220127AFBB72002084EA /* 字符串转换整数.swift */,
+				EC18220327AFDD5C002084EA /* 实现 strStr().swift */,
+				EC18220527B1FECC002084EA /* 最长公共前缀.swift */,
+			);
+			path = "字符串";
+			sourceTree = "<group>";
+		};
+		EC18220727B3894C002084EA /* 链表 */ = {
 			isa = PBXGroup;
 			children = (
 				EC1821D927AAAC7C002084EA /* 合并两个有序链表.swift */,
-				EC1821DB27AABCC1002084EA /* 合并两个有序数组.swift */,
+				EC1821DD27AAC675002084EA /* 合并K个升序链表.swift */,
 			);
-			path = Exercise;
+			path = "链表";
+			sourceTree = "<group>";
+		};
+		EC18220827B3895A002084EA /* 树 */ = {
+			isa = PBXGroup;
+			children = (
+				EC1821DF27AAD0E3002084EA /* 平衡二叉树.swift */,
+			);
+			path = "树";
 			sourceTree = "<group>";
 		};
 		EC95B0FF279EEB3C00043327 /* Tree */ = {
@@ -168,7 +260,7 @@
 		ECB637C2279908B8003C2F43 /* leetcode */ = {
 			isa = PBXGroup;
 			children = (
-				EC1821D827AAAC63002084EA /* Exercise */,
+				EC1821D827AAAC63002084EA /* 初级算法 */,
 				EC95B10C27A7B71000043327 /* Sort */,
 				EC95B102279EF46C00043327 /* LinearTable */,
 				EC95B0FF279EEB3C00043327 /* Tree */,
@@ -303,23 +395,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */,
+				EC1821E027AAD0E3002084EA /* 平衡二叉树.swift in Sources */,
 				EC95B11227A7B7DD00043327 /* InstertionSort.swift in Sources */,
+				EC1821E227AB6B52002084EA /* 删除排序数组中的重复项.swift in Sources */,
+				EC18220227AFBB72002084EA /* 字符串转换整数.swift in Sources */,
 				EC95B11427A7B80500043327 /* MergeSort.swift in Sources */,
 				ECB6379727990840003C2F43 /* ViewController.swift in Sources */,
 				EC95B10927A27E4500043327 /* BinarySearchTree.swift in Sources */,
 				EC95B10B27A3F39E00043327 /* AVLTree.swift in Sources */,
+				EC1821F427AF7DC8002084EA /* 买卖股票的最佳时机 II.swift in Sources */,
 				ECB637CA279C5079003C2F43 /* DoublyLinkedList.swift in Sources */,
 				ECB637C5279908FE003C2F43 /* 翻转链表链表.swift in Sources */,
+				EC1821FE27AFAD47002084EA /* 有效的字母异位词.swift in Sources */,
+				EC1821EA27AD41E6002084EA /* 加一 .swift in Sources */,
+				EC1821DE27AAC675002084EA /* 合并K个升序链表.swift in Sources */,
 				EC95B11027A7B7B800043327 /* SelectionSort.swift in Sources */,
+				EC1821F827AF7F71002084EA /* 反转字符串.swift in Sources */,
+				EC1821E627ABDE70002084EA /* 存在重复元素.swift in Sources */,
+				EC1821F027AE6B7F002084EA /* 有效的数独.swift in Sources */,
+				EC18220427AFDD5C002084EA /* 实现 strStr().swift in Sources */,
 				ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */,
 				EC95B10E27A7B79E00043327 /* BubbleSort.swift in Sources */,
+				EC1821EE27AE4E7F002084EA /* 两数和.swift in Sources */,
 				ECB637CC279C5375003C2F43 /* CircularLinkedList.swift in Sources */,
+				EC18220027AFAFDB002084EA /* 验证回文串.swift in Sources */,
 				EC1821DC27AABCC1002084EA /* 合并两个有序数组.swift in Sources */,
 				EC95B10727A1615A00043327 /* Stack.swift in Sources */,
 				ECB6379327990840003C2F43 /* AppDelegate.swift in Sources */,
 				EC95B11627A7B82600043327 /* QuickSort.swift in Sources */,
+				EC1821FA27AF8A24002084EA /* 整数反转.swift in Sources */,
+				EC18220627B1FECC002084EA /* 最长公共前缀.swift in Sources */,
+				EC1821EC27AE2FBD002084EA /* 移动零.swift in Sources */,
+				EC1821E827AC167A002084EA /* 只出现一次的数字.swift in Sources */,
 				EC1821DA27AAAC7C002084EA /* 合并两个有序链表.swift in Sources */,
 				EC95B104279EF47A00043327 /* Queue.swift in Sources */,
+				EC1821F227AE7C10002084EA /* 旋转图像.swift in Sources */,
+				EC1821FC27AF9B21002084EA /* 字符串中的第一个唯一字符.swift in Sources */,
+				EC1821E427AB8D1A002084EA /* 旋转数组.swift in Sources */,
 				ECB6379527990840003C2F43 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
