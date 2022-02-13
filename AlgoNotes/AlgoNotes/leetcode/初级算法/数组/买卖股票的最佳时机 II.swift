@@ -8,7 +8,7 @@
 // https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/x2zsx1/
 import Foundation
 
-func maxProfit(_ prices: [Int]) -> Int {
+func maxProfit2(_ prices: [Int]) -> Int {
     guard prices.count > 1 else {
         return 0
     }

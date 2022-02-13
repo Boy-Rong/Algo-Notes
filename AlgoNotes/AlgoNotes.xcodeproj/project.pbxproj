@@ -29,6 +29,26 @@
 		EC18220227AFBB72002084EA /* 字符串转换整数.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220127AFBB72002084EA /* 字符串转换整数.swift */; };
 		EC18220427AFDD5C002084EA /* 实现 strStr().swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220327AFDD5C002084EA /* 实现 strStr().swift */; };
 		EC18220627B1FECC002084EA /* 最长公共前缀.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220527B1FECC002084EA /* 最长公共前缀.swift */; };
+		EC18220A27B38988002084EA /* 删除链表中的节点.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220927B38988002084EA /* 删除链表中的节点.swift */; };
+		EC18220C27B389ED002084EA /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220B27B389ED002084EA /* ListNode.swift */; };
+		EC18220E27B38BA9002084EA /* 删除链表的倒数第N个节点.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220D27B38BA9002084EA /* 删除链表的倒数第N个节点.swift */; };
+		EC18221027B3A53C002084EA /* 反转链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18220F27B3A53C002084EA /* 反转链表.swift */; };
+		EC18221227B3B3F8002084EA /* 回文链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18221127B3B3F8002084EA /* 回文链表.swift */; };
+		EC18221427B3EE91002084EA /* 二叉树的最大深度.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18221327B3EE91002084EA /* 二叉树的最大深度.swift */; };
+		EC18221627B3EECC002084EA /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18221527B3EECC002084EA /* TreeNode.swift */; };
+		EC18221827B3F22E002084EA /* 验证二叉搜索树.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18221727B3F22E002084EA /* 验证二叉搜索树.swift */; };
+		EC18221A27B4BD20002084EA /* 前缀.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18221927B4BD20002084EA /* 前缀.swift */; };
+		EC18221C27B4ED2A002084EA /* 对称二叉树.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18221B27B4ED2A002084EA /* 对称二叉树.swift */; };
+		EC18221E27B5161A002084EA /* 将有序数组转换为二叉搜索树.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18221D27B5161A002084EA /* 将有序数组转换为二叉搜索树.swift */; };
+		EC18222027B53D6C002084EA /* 第一个错误的版本.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18221F27B53D6C002084EA /* 第一个错误的版本.swift */; };
+		EC18222327B6052E002084EA /* 爬楼梯.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18222227B6052E002084EA /* 爬楼梯.swift */; };
+		EC18222527B678A4002084EA /* 买卖股票的最佳时机.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18222427B678A4002084EA /* 买卖股票的最佳时机.swift */; };
+		EC18222727B7613F002084EA /* 最大子序和.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18222627B7613F002084EA /* 最大子序和.swift */; };
+		EC18222A27B7751C002084EA /* 打乱数组.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18222927B7751C002084EA /* 打乱数组.swift */; };
+		EC18222C27B78351002084EA /* 最小栈.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18222B27B78351002084EA /* 最小栈.swift */; };
+		EC18222F27B78993002084EA /* Fizz Buzz .swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18222E27B78993002084EA /* Fizz Buzz .swift */; };
+		EC18223127B7970F002084EA /* 计数质树.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223027B7970F002084EA /* 计数质树.swift */; };
+		EC18223327B79854002084EA /* 3的幂.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223227B79854002084EA /* 3的幂.swift */; };
 		EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B100279EEB5500043327 /* BinaryTree.swift */; };
 		EC95B104279EF47A00043327 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B103279EF47A00043327 /* Queue.swift */; };
 		EC95B10727A1615A00043327 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B10627A1615A00043327 /* Stack.swift */; };
@@ -85,6 +105,26 @@
 		EC18220127AFBB72002084EA /* 字符串转换整数.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "字符串转换整数.swift"; sourceTree = "<group>"; };
 		EC18220327AFDD5C002084EA /* 实现 strStr().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "实现 strStr().swift"; sourceTree = "<group>"; };
 		EC18220527B1FECC002084EA /* 最长公共前缀.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "最长公共前缀.swift"; sourceTree = "<group>"; };
+		EC18220927B38988002084EA /* 删除链表中的节点.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "删除链表中的节点.swift"; sourceTree = "<group>"; };
+		EC18220B27B389ED002084EA /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		EC18220D27B38BA9002084EA /* 删除链表的倒数第N个节点.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "删除链表的倒数第N个节点.swift"; sourceTree = "<group>"; };
+		EC18220F27B3A53C002084EA /* 反转链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "反转链表.swift"; sourceTree = "<group>"; };
+		EC18221127B3B3F8002084EA /* 回文链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "回文链表.swift"; sourceTree = "<group>"; };
+		EC18221327B3EE91002084EA /* 二叉树的最大深度.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "二叉树的最大深度.swift"; sourceTree = "<group>"; };
+		EC18221527B3EECC002084EA /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
+		EC18221727B3F22E002084EA /* 验证二叉搜索树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "验证二叉搜索树.swift"; sourceTree = "<group>"; };
+		EC18221927B4BD20002084EA /* 前缀.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "前缀.swift"; sourceTree = "<group>"; };
+		EC18221B27B4ED2A002084EA /* 对称二叉树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "对称二叉树.swift"; sourceTree = "<group>"; };
+		EC18221D27B5161A002084EA /* 将有序数组转换为二叉搜索树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "将有序数组转换为二叉搜索树.swift"; sourceTree = "<group>"; };
+		EC18221F27B53D6C002084EA /* 第一个错误的版本.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "第一个错误的版本.swift"; sourceTree = "<group>"; };
+		EC18222227B6052E002084EA /* 爬楼梯.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "爬楼梯.swift"; sourceTree = "<group>"; };
+		EC18222427B678A4002084EA /* 买卖股票的最佳时机.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "买卖股票的最佳时机.swift"; sourceTree = "<group>"; };
+		EC18222627B7613F002084EA /* 最大子序和.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "最大子序和.swift"; sourceTree = "<group>"; };
+		EC18222927B7751C002084EA /* 打乱数组.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "打乱数组.swift"; sourceTree = "<group>"; };
+		EC18222B27B78351002084EA /* 最小栈.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "最小栈.swift"; sourceTree = "<group>"; };
+		EC18222E27B78993002084EA /* Fizz Buzz .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fizz Buzz .swift"; sourceTree = "<group>"; };
+		EC18223027B7970F002084EA /* 计数质树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "计数质树.swift"; sourceTree = "<group>"; };
+		EC18223227B79854002084EA /* 3的幂.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3的幂.swift"; sourceTree = "<group>"; };
 		EC95B100279EEB5500043327 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		EC95B103279EF47A00043327 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		EC95B10627A1615A00043327 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -132,10 +172,15 @@
 		EC1821D827AAAC63002084EA /* 初级算法 */ = {
 			isa = PBXGroup;
 			children = (
+				EC18222D27B78987002084EA /* 数学 */,
+				EC18222827B7750A002084EA /* 设计问题 */,
+				EC18222127B6051B002084EA /* 动态规划 */,
 				EC18220827B3895A002084EA /* 树 */,
 				EC18220727B3894C002084EA /* 链表 */,
 				EC1821F627AF7F58002084EA /* 字符串 */,
 				EC1821F527AF7F36002084EA /* 数组 */,
+				EC18221927B4BD20002084EA /* 前缀.swift */,
+				EC18221F27B53D6C002084EA /* 第一个错误的版本.swift */,
 			);
 			path = "初级算法";
 			sourceTree = "<group>";
@@ -176,8 +221,13 @@
 		EC18220727B3894C002084EA /* 链表 */ = {
 			isa = PBXGroup;
 			children = (
+				EC18220B27B389ED002084EA /* ListNode.swift */,
 				EC1821D927AAAC7C002084EA /* 合并两个有序链表.swift */,
 				EC1821DD27AAC675002084EA /* 合并K个升序链表.swift */,
+				EC18220927B38988002084EA /* 删除链表中的节点.swift */,
+				EC18220D27B38BA9002084EA /* 删除链表的倒数第N个节点.swift */,
+				EC18220F27B3A53C002084EA /* 反转链表.swift */,
+				EC18221127B3B3F8002084EA /* 回文链表.swift */,
 			);
 			path = "链表";
 			sourceTree = "<group>";
@@ -186,8 +236,49 @@
 			isa = PBXGroup;
 			children = (
 				EC1821DF27AAD0E3002084EA /* 平衡二叉树.swift */,
+				EC18221327B3EE91002084EA /* 二叉树的最大深度.swift */,
+				EC18221527B3EECC002084EA /* TreeNode.swift */,
+				EC18221727B3F22E002084EA /* 验证二叉搜索树.swift */,
+				EC18221B27B4ED2A002084EA /* 对称二叉树.swift */,
+				EC18221D27B5161A002084EA /* 将有序数组转换为二叉搜索树.swift */,
 			);
 			path = "树";
+			sourceTree = "<group>";
+		};
+		EC18222127B6051B002084EA /* 动态规划 */ = {
+			isa = PBXGroup;
+			children = (
+				EC18222227B6052E002084EA /* 爬楼梯.swift */,
+				EC18222427B678A4002084EA /* 买卖股票的最佳时机.swift */,
+				EC18222627B7613F002084EA /* 最大子序和.swift */,
+			);
+			path = "动态规划";
+			sourceTree = "<group>";
+		};
+		EC18222827B7750A002084EA /* 设计问题 */ = {
+			isa = PBXGroup;
+			children = (
+				EC18222927B7751C002084EA /* 打乱数组.swift */,
+				EC18222B27B78351002084EA /* 最小栈.swift */,
+			);
+			path = "设计问题";
+			sourceTree = "<group>";
+		};
+		EC18222D27B78987002084EA /* 数学 */ = {
+			isa = PBXGroup;
+			children = (
+				EC18222E27B78993002084EA /* Fizz Buzz .swift */,
+				EC18223027B7970F002084EA /* 计数质树.swift */,
+				EC18223227B79854002084EA /* 3的幂.swift */,
+			);
+			path = "数学";
+			sourceTree = "<group>";
+		};
+		EC18223527B8BE32002084EA /* 数组&字符串 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "数组&字符串";
 			sourceTree = "<group>";
 		};
 		EC95B0FF279EEB3C00043327 /* Tree */ = {
@@ -260,6 +351,7 @@
 		ECB637C2279908B8003C2F43 /* leetcode */ = {
 			isa = PBXGroup;
 			children = (
+				EC18223527B8BE32002084EA /* 数组&字符串 */,
 				EC1821D827AAAC63002084EA /* 初级算法 */,
 				EC95B10C27A7B71000043327 /* Sort */,
 				EC95B102279EF46C00043327 /* LinearTable */,
@@ -394,14 +486,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC18221A27B4BD20002084EA /* 前缀.swift in Sources */,
+				EC18221827B3F22E002084EA /* 验证二叉搜索树.swift in Sources */,
+				EC18221427B3EE91002084EA /* 二叉树的最大深度.swift in Sources */,
+				EC18222C27B78351002084EA /* 最小栈.swift in Sources */,
 				EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */,
+				EC18220C27B389ED002084EA /* ListNode.swift in Sources */,
 				EC1821E027AAD0E3002084EA /* 平衡二叉树.swift in Sources */,
 				EC95B11227A7B7DD00043327 /* InstertionSort.swift in Sources */,
 				EC1821E227AB6B52002084EA /* 删除排序数组中的重复项.swift in Sources */,
 				EC18220227AFBB72002084EA /* 字符串转换整数.swift in Sources */,
 				EC95B11427A7B80500043327 /* MergeSort.swift in Sources */,
+				EC18221E27B5161A002084EA /* 将有序数组转换为二叉搜索树.swift in Sources */,
 				ECB6379727990840003C2F43 /* ViewController.swift in Sources */,
+				EC18221C27B4ED2A002084EA /* 对称二叉树.swift in Sources */,
+				EC18221227B3B3F8002084EA /* 回文链表.swift in Sources */,
+				EC18223127B7970F002084EA /* 计数质树.swift in Sources */,
 				EC95B10927A27E4500043327 /* BinarySearchTree.swift in Sources */,
+				EC18222327B6052E002084EA /* 爬楼梯.swift in Sources */,
 				EC95B10B27A3F39E00043327 /* AVLTree.swift in Sources */,
 				EC1821F427AF7DC8002084EA /* 买卖股票的最佳时机 II.swift in Sources */,
 				ECB637CA279C5079003C2F43 /* DoublyLinkedList.swift in Sources */,
@@ -410,21 +512,31 @@
 				EC1821EA27AD41E6002084EA /* 加一 .swift in Sources */,
 				EC1821DE27AAC675002084EA /* 合并K个升序链表.swift in Sources */,
 				EC95B11027A7B7B800043327 /* SelectionSort.swift in Sources */,
+				EC18223327B79854002084EA /* 3的幂.swift in Sources */,
 				EC1821F827AF7F71002084EA /* 反转字符串.swift in Sources */,
 				EC1821E627ABDE70002084EA /* 存在重复元素.swift in Sources */,
 				EC1821F027AE6B7F002084EA /* 有效的数独.swift in Sources */,
 				EC18220427AFDD5C002084EA /* 实现 strStr().swift in Sources */,
 				ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */,
+				EC18222027B53D6C002084EA /* 第一个错误的版本.swift in Sources */,
 				EC95B10E27A7B79E00043327 /* BubbleSort.swift in Sources */,
 				EC1821EE27AE4E7F002084EA /* 两数和.swift in Sources */,
+				EC18220E27B38BA9002084EA /* 删除链表的倒数第N个节点.swift in Sources */,
 				ECB637CC279C5375003C2F43 /* CircularLinkedList.swift in Sources */,
+				EC18222727B7613F002084EA /* 最大子序和.swift in Sources */,
+				EC18222F27B78993002084EA /* Fizz Buzz .swift in Sources */,
 				EC18220027AFAFDB002084EA /* 验证回文串.swift in Sources */,
 				EC1821DC27AABCC1002084EA /* 合并两个有序数组.swift in Sources */,
 				EC95B10727A1615A00043327 /* Stack.swift in Sources */,
+				EC18221627B3EECC002084EA /* TreeNode.swift in Sources */,
 				ECB6379327990840003C2F43 /* AppDelegate.swift in Sources */,
 				EC95B11627A7B82600043327 /* QuickSort.swift in Sources */,
+				EC18222527B678A4002084EA /* 买卖股票的最佳时机.swift in Sources */,
 				EC1821FA27AF8A24002084EA /* 整数反转.swift in Sources */,
 				EC18220627B1FECC002084EA /* 最长公共前缀.swift in Sources */,
+				EC18220A27B38988002084EA /* 删除链表中的节点.swift in Sources */,
+				EC18221027B3A53C002084EA /* 反转链表.swift in Sources */,
+				EC18222A27B7751C002084EA /* 打乱数组.swift in Sources */,
 				EC1821EC27AE2FBD002084EA /* 移动零.swift in Sources */,
 				EC1821E827AC167A002084EA /* 只出现一次的数字.swift in Sources */,
 				EC1821DA27AAAC7C002084EA /* 合并两个有序链表.swift in Sources */,

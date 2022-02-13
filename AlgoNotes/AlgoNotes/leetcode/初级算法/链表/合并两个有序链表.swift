@@ -9,12 +9,6 @@
 
 import Foundation
 
-class ListNode {
-    var val: Int
-    var next: ListNode?
-    init() { self.val = 0; self.next = nil; }
-}
-
 func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
     let list = ListNode()
     var leftList = list1

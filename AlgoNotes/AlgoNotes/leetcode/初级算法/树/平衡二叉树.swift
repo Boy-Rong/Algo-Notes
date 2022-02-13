@@ -8,14 +8,6 @@
 // https://leetcode-cn.com/problems/balanced-binary-tree/
 import Foundation
 
-class TreeNode {
-    var val: Int
-    var left: TreeNode?
-    var right: TreeNode?
-    
-    init() { self.val = 0; self.left = nil; self.right = nil; }
-}
-
 func isBalanced(_ root: TreeNode?) -> Bool {
     let leftHeight = treeHeight(root: root?.left)
     let rightHeight = treeHeight(root: root?.right)
@@ -34,4 +26,17 @@ func treeHeight(root: TreeNode?) -> Int {
     let leftHeight = treeHeight(root: root?.left)
     let rightHeight = treeHeight(root: root?.right)
     return max(leftHeight, rightHeight) + 1
+}
+
+
+func isBalanced1(_ root: TreeNode?) -> Bool {
+    guard root != nil else {
+        return true
+    }
+    guard root?.left == nil && root?.right == nil else {
+        return true
+    }
+    
+//    isBalanced1(root)
+    return true
 }
