@@ -49,6 +49,15 @@
 		EC18222F27B78993002084EA /* Fizz Buzz .swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18222E27B78993002084EA /* Fizz Buzz .swift */; };
 		EC18223127B7970F002084EA /* 计数质树.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223027B7970F002084EA /* 计数质树.swift */; };
 		EC18223327B79854002084EA /* 3的幂.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223227B79854002084EA /* 3的幂.swift */; };
+		EC18223727B8BE6C002084EA /* 寻找数组的中心索引.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223627B8BE6C002084EA /* 寻找数组的中心索引.swift */; };
+		EC18223927B8C7CA002084EA /* 搜索插入位置.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223827B8C7CA002084EA /* 搜索插入位置.swift */; };
+		EC18223B27B8CA04002084EA /* 合并区间.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223A27B8CA04002084EA /* 合并区间.swift */; };
+		EC18223D27B8E198002084EA /* 零矩阵.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223C27B8E198002084EA /* 零矩阵.swift */; };
+		EC18223F27B8F3F1002084EA /* 对角线遍历.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18223E27B8F3F1002084EA /* 对角线遍历.swift */; };
+		EC18224127B9FF27002084EA /* 最长回文子串.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18224027B9FF27002084EA /* 最长回文子串.swift */; };
+		EC18224327BA2250002084EA /* 翻转字符串里的单词.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18224227BA2250002084EA /* 翻转字符串里的单词.swift */; };
+		EC18224527BA4E50002084EA /* 数组拆分 I.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18224427BA4E50002084EA /* 数组拆分 I.swift */; };
+		EC18224727BA54B8002084EA /* 两数之和 II - 输入有序数组.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18224627BA54B8002084EA /* 两数之和 II - 输入有序数组.swift */; };
 		EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B100279EEB5500043327 /* BinaryTree.swift */; };
 		EC95B104279EF47A00043327 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B103279EF47A00043327 /* Queue.swift */; };
 		EC95B10727A1615A00043327 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B10627A1615A00043327 /* Stack.swift */; };
@@ -125,6 +134,15 @@
 		EC18222E27B78993002084EA /* Fizz Buzz .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fizz Buzz .swift"; sourceTree = "<group>"; };
 		EC18223027B7970F002084EA /* 计数质树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "计数质树.swift"; sourceTree = "<group>"; };
 		EC18223227B79854002084EA /* 3的幂.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3的幂.swift"; sourceTree = "<group>"; };
+		EC18223627B8BE6C002084EA /* 寻找数组的中心索引.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "寻找数组的中心索引.swift"; sourceTree = "<group>"; };
+		EC18223827B8C7CA002084EA /* 搜索插入位置.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "搜索插入位置.swift"; sourceTree = "<group>"; };
+		EC18223A27B8CA04002084EA /* 合并区间.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "合并区间.swift"; sourceTree = "<group>"; };
+		EC18223C27B8E198002084EA /* 零矩阵.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "零矩阵.swift"; sourceTree = "<group>"; };
+		EC18223E27B8F3F1002084EA /* 对角线遍历.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "对角线遍历.swift"; sourceTree = "<group>"; };
+		EC18224027B9FF27002084EA /* 最长回文子串.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "最长回文子串.swift"; sourceTree = "<group>"; };
+		EC18224227BA2250002084EA /* 翻转字符串里的单词.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "翻转字符串里的单词.swift"; sourceTree = "<group>"; };
+		EC18224427BA4E50002084EA /* 数组拆分 I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "数组拆分 I.swift"; sourceTree = "<group>"; };
+		EC18224627BA54B8002084EA /* 两数之和 II - 输入有序数组.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "两数之和 II - 输入有序数组.swift"; sourceTree = "<group>"; };
 		EC95B100279EEB5500043327 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		EC95B103279EF47A00043327 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		EC95B10627A1615A00043327 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -277,6 +295,15 @@
 		EC18223527B8BE32002084EA /* 数组&字符串 */ = {
 			isa = PBXGroup;
 			children = (
+				EC18223627B8BE6C002084EA /* 寻找数组的中心索引.swift */,
+				EC18223827B8C7CA002084EA /* 搜索插入位置.swift */,
+				EC18223A27B8CA04002084EA /* 合并区间.swift */,
+				EC18223C27B8E198002084EA /* 零矩阵.swift */,
+				EC18223E27B8F3F1002084EA /* 对角线遍历.swift */,
+				EC18224027B9FF27002084EA /* 最长回文子串.swift */,
+				EC18224227BA2250002084EA /* 翻转字符串里的单词.swift */,
+				EC18224427BA4E50002084EA /* 数组拆分 I.swift */,
+				EC18224627BA54B8002084EA /* 两数之和 II - 输入有序数组.swift */,
 			);
 			path = "数组&字符串";
 			sourceTree = "<group>";
@@ -488,16 +515,20 @@
 			files = (
 				EC18221A27B4BD20002084EA /* 前缀.swift in Sources */,
 				EC18221827B3F22E002084EA /* 验证二叉搜索树.swift in Sources */,
+				EC18223D27B8E198002084EA /* 零矩阵.swift in Sources */,
+				EC18223F27B8F3F1002084EA /* 对角线遍历.swift in Sources */,
 				EC18221427B3EE91002084EA /* 二叉树的最大深度.swift in Sources */,
 				EC18222C27B78351002084EA /* 最小栈.swift in Sources */,
 				EC95B101279EEB5500043327 /* BinaryTree.swift in Sources */,
 				EC18220C27B389ED002084EA /* ListNode.swift in Sources */,
 				EC1821E027AAD0E3002084EA /* 平衡二叉树.swift in Sources */,
+				EC18224527BA4E50002084EA /* 数组拆分 I.swift in Sources */,
 				EC95B11227A7B7DD00043327 /* InstertionSort.swift in Sources */,
 				EC1821E227AB6B52002084EA /* 删除排序数组中的重复项.swift in Sources */,
 				EC18220227AFBB72002084EA /* 字符串转换整数.swift in Sources */,
 				EC95B11427A7B80500043327 /* MergeSort.swift in Sources */,
 				EC18221E27B5161A002084EA /* 将有序数组转换为二叉搜索树.swift in Sources */,
+				EC18224327BA2250002084EA /* 翻转字符串里的单词.swift in Sources */,
 				ECB6379727990840003C2F43 /* ViewController.swift in Sources */,
 				EC18221C27B4ED2A002084EA /* 对称二叉树.swift in Sources */,
 				EC18221227B3B3F8002084EA /* 回文链表.swift in Sources */,
@@ -508,6 +539,7 @@
 				EC1821F427AF7DC8002084EA /* 买卖股票的最佳时机 II.swift in Sources */,
 				ECB637CA279C5079003C2F43 /* DoublyLinkedList.swift in Sources */,
 				ECB637C5279908FE003C2F43 /* 翻转链表链表.swift in Sources */,
+				EC18223927B8C7CA002084EA /* 搜索插入位置.swift in Sources */,
 				EC1821FE27AFAD47002084EA /* 有效的字母异位词.swift in Sources */,
 				EC1821EA27AD41E6002084EA /* 加一 .swift in Sources */,
 				EC1821DE27AAC675002084EA /* 合并K个升序链表.swift in Sources */,
@@ -518,6 +550,7 @@
 				EC1821F027AE6B7F002084EA /* 有效的数独.swift in Sources */,
 				EC18220427AFDD5C002084EA /* 实现 strStr().swift in Sources */,
 				ECB637C727992A17003C2F43 /* LinkedList.swift in Sources */,
+				EC18223B27B8CA04002084EA /* 合并区间.swift in Sources */,
 				EC18222027B53D6C002084EA /* 第一个错误的版本.swift in Sources */,
 				EC95B10E27A7B79E00043327 /* BubbleSort.swift in Sources */,
 				EC1821EE27AE4E7F002084EA /* 两数和.swift in Sources */,
@@ -527,6 +560,7 @@
 				EC18222F27B78993002084EA /* Fizz Buzz .swift in Sources */,
 				EC18220027AFAFDB002084EA /* 验证回文串.swift in Sources */,
 				EC1821DC27AABCC1002084EA /* 合并两个有序数组.swift in Sources */,
+				EC18224727BA54B8002084EA /* 两数之和 II - 输入有序数组.swift in Sources */,
 				EC95B10727A1615A00043327 /* Stack.swift in Sources */,
 				EC18221627B3EECC002084EA /* TreeNode.swift in Sources */,
 				ECB6379327990840003C2F43 /* AppDelegate.swift in Sources */,
@@ -541,9 +575,11 @@
 				EC1821E827AC167A002084EA /* 只出现一次的数字.swift in Sources */,
 				EC1821DA27AAAC7C002084EA /* 合并两个有序链表.swift in Sources */,
 				EC95B104279EF47A00043327 /* Queue.swift in Sources */,
+				EC18224127B9FF27002084EA /* 最长回文子串.swift in Sources */,
 				EC1821F227AE7C10002084EA /* 旋转图像.swift in Sources */,
 				EC1821FC27AF9B21002084EA /* 字符串中的第一个唯一字符.swift in Sources */,
 				EC1821E427AB8D1A002084EA /* 旋转数组.swift in Sources */,
+				EC18223727B8BE6C002084EA /* 寻找数组的中心索引.swift in Sources */,
 				ECB6379527990840003C2F43 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
