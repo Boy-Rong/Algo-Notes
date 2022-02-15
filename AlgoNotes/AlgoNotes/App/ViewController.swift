@@ -97,14 +97,16 @@ class ViewController: UIViewController {
     }
     
     func testLeetcodeList() {
-        var list = [-1, 0]
+        var list = [2,3,1,2,4,3]
 //        let string = "the sky     is blue"
 //        let value = pivotIndex(list)
 //        let value = findDiagonalOrder(list)
 //        let value = longestPalindrome(string)
 //        let value = reverseWords(string)
 //        let value = arrayPairSum(list)
-        let value = twoSum2(list, -1)
+//        let value = twoSum2(list, -1)
+//        let value = minSubArrayLen(7, list)
+        let value = reverseWords("Let's take LeetCode contest")
         debugPrint(value)
     }
 }
