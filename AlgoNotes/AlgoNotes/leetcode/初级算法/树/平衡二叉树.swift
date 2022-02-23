@@ -9,10 +9,17 @@
 import Foundation
 
 func isBalanced(_ root: TreeNode?) -> Bool {
+    guard root != nil else {
+        return true
+    }
+    guard root?.left == nil && root?.right == nil else {
+        return true
+    }
+    
+    let balanced = isBalanced(root?.left) && isBalanced(root?.right)
     let leftHeight = treeHeight(root: root?.left)
     let rightHeight = treeHeight(root: root?.right)
-    let isBalanced = abs(leftHeight - rightHeight) < 2
-    return isBalanced
+    return abs(leftHeight - rightHeight) < 2 && balanced
 }
 
 func treeHeight(root: TreeNode?) -> Int {
@@ -26,17 +33,4 @@ func treeHeight(root: TreeNode?) -> Int {
     let leftHeight = treeHeight(root: root?.left)
     let rightHeight = treeHeight(root: root?.right)
     return max(leftHeight, rightHeight) + 1
-}
-
-
-func isBalanced1(_ root: TreeNode?) -> Bool {
-    guard root != nil else {
-        return true
-    }
-    guard root?.left == nil && root?.right == nil else {
-        return true
-    }
-    
-//    isBalanced1(root)
-    return true
 }

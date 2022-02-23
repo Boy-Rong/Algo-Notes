@@ -12,7 +12,6 @@ func isValidBST(_ root: TreeNode?) -> Bool {
     if root == nil {
         return true
     }
-    
     return isValidBST(root, min: Int.min, max: Int.max)
 }
 

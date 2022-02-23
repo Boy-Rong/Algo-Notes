@@ -97,7 +97,25 @@ class ViewController: UIViewController {
     }
     
     func testLeetcodeList() {
-        var list = [2,3,1,2,4,3]
+//        var list = [3,4,5,1,2]
+//        let root = NTreeNode.init(1001, children: [
+//            NTreeNode.init(100101, children: [
+//                NTreeNode.init(10010101, children: []),
+//                NTreeNode.init(10010102, children: []),
+//                NTreeNode.init(10010103, children: [])
+//            ]),
+//            NTreeNode.init(100102, children: [
+//                NTreeNode.init(10010201, children: []),
+//                NTreeNode.init(10010202, children: []),
+//                NTreeNode.init(10010203, children: [])
+//            ]),
+//            NTreeNode.init(100103, children: [
+//                NTreeNode.init(10010301, children: []),
+//                NTreeNode.init(10010302, children: []),
+//                NTreeNode.init(10010303, children: [])
+//            ])
+//        ])
+
 //        let string = "the sky     is blue"
 //        let value = pivotIndex(list)
 //        let value = findDiagonalOrder(list)
@@ -106,7 +124,16 @@ class ViewController: UIViewController {
 //        let value = arrayPairSum(list)
 //        let value = twoSum2(list, -1)
 //        let value = minSubArrayLen(7, list)
-        let value = reverseWords("Let's take LeetCode contest")
+//        let value = reverseWords("Let's take LeetCode contest")
+//        let value = findMin(list)
+//        let value = search(root: root, targetId: 1001)
+        let node3 = ListNode.init(val: 4)
+        let node2 = ListNode.init(val: 0, next: node3)
+        let node1 = ListNode.init(val: 2, next: node2)
+        node3.next = node1
+        let head = ListNode.init(val: 3, next: node1)
+        
+        let value = detectCycle(head)
         debugPrint(value)
     }
 }
