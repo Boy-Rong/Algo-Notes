@@ -127,13 +127,47 @@ class ViewController: UIViewController {
 //        let value = reverseWords("Let's take LeetCode contest")
 //        let value = findMin(list)
 //        let value = search(root: root, targetId: 1001)
-        let node3 = ListNode.init(val: 4)
-        let node2 = ListNode.init(val: 0, next: node3)
-        let node1 = ListNode.init(val: 2, next: node2)
-        node3.next = node1
-        let head = ListNode.init(val: 3, next: node1)
+//        let node3 = ListNode.init(val: 4)
+//        let node2 = ListNode.init(val: 0, next: node3)
+//        let node1 = ListNode.init(val: 2, next: node2)
+//        node3.next = node1
+//        let head = ListNode.init(val: 3, next: node1)
+//        let value = detectCycle(head)
         
-        let value = detectCycle(head)
+//        let head1 = ListNode.init(val: 9, next: .init(val: 9, next: .init(val: 9, next: .init(val: 9, next: .init(val: 9, next: .init(val: 9, next: .init(val: 9)))))))
+//        let head2 = ListNode.init(val: 9, next: .init(val: 9, next: .init(val: 9, next: .init(val: 9))))
+//        let value = addTwoNumbers(head1, head2)
+        
+//        let head = ListNode.init(val: 1, next: .init(val: 2, next: .init(val: 3, next: .init(val: 4, next: .init(val: 5)))))
+//        let head = ListNode.init(val: 3, next: .init(val: 3, next: .init(val: 3)))
+//        head.next?.next?.next = head
+//        let value = rotateRight(head, 1)
+//        let value = removeElements(head, 6)
+//        let value = isPalindrome1(head)
+//        let value = sortList(head)
+//        let value = insert(head, 0)
+//        debugPrint(value)
+        
+//        let node9 = TreeNode.init(val: 9)
+//        let node15 = TreeNode.init(val: 15)
+//        let node7 = TreeNode.init(val: 7)
+//        let node20 = TreeNode.init(val: 20, left: node15, right: node7)
+//        let root = TreeNode.init(val: 3, left: node9, right: node20)
+//        let value = levelOrder(root)
+        
+//        let value = longestCommonSubsequence("abcde", "ace")
+//        debugPrint(value)
+        
+//        let value = longestConsecutive([1,2,0,1])
+//        let value = findKthLargest([3,3,3,3,3,3,3,3,3], 1)
+//        debugPrint(value)
+        
+//        let head = ListNode.init(val: 1, next: .init(val: 4, next: .init(val: 3, next: .init(val: 2, next: .init(val: 5, next: .init(val: 2))))))
+//        let value = listNode(head, 3)
+//        let value = lengthOfLongestSubstring("abba")
+//        let value = reverseParentheses("(abcd)")
+//        let value = letterCombinations("23")
+        let value = threeSum([-1,0,1,2,-1,-4])
         debugPrint(value)
     }
 }

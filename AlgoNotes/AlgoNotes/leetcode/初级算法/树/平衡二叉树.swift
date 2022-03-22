@@ -34,3 +34,42 @@ func treeHeight(root: TreeNode?) -> Int {
     let rightHeight = treeHeight(root: root?.right)
     return max(leftHeight, rightHeight) + 1
 }
+
+func levelOrder(_ root: TreeNode?) -> [[Int]] {
+    if root == nil {
+        return []
+    }
+
+    var list: [[Int]] = []
+
+    var queue = Queue<TreeNode>()
+    var lCount = 0
+    if let root = root {
+        queue.enqueue(element:root)
+        lCount += 1
+    }
+
+    var subList: [TreeNode] = []
+    while !queue.isEmpty {
+        guard let value = queue.dequeue() else  {
+            continue
+        }
+        
+        lCount -= 1
+        subList.append(value)
+        if let left = value.left {
+            queue.enqueue(element: left)
+        }
+        if let right = value.right {
+            queue.enqueue(element: right)
+        }
+
+        if lCount == 0 {
+            list.append(subList.map({ $0.val }))
+            lCount = queue.count
+            subList = []
+        }
+    }
+    
+    return list
+}

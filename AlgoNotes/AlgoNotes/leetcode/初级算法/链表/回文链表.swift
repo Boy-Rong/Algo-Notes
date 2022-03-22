@@ -38,3 +38,32 @@ func isPalindrome(_ head: ListNode?) -> Bool {
     
     return true
 }
+
+
+func isPalindrome1(_ head: ListNode?) -> Bool {
+    guard head?.next != nil else {
+        return false
+    }
+    
+    var fast = head
+    var slow = head
+    
+    while fast != nil {
+        fast = fast?.next?.next
+        slow = slow?.next
+    }
+    
+    var current = head
+    var tail = reverseList(slow)
+    
+    while tail != nil {
+        if current?.val != tail?.val {
+            return false
+        }
+        current = current?.next
+        tail = tail?.next
+    }
+    
+    return true
+}
+

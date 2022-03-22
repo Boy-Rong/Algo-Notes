@@ -45,6 +45,11 @@ public struct Queue<Element> {
         }
     }
     
+    /// 所有数据
+    public var values: [Element] {
+        elements
+    }
+    
     /// 入队
     public mutating func enqueue(element: Element) {
         elements.append(element)

@@ -18,3 +18,19 @@ class TreeNode {
         self.right = right
     }
 }
+
+extension TreeNode: Hashable {
+    
+    static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+        lhs === rhs
+    }
+    
+    var hashValue: Int {
+        ObjectIdentifier(self).hashValue
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self)
+    }
+    
+}

@@ -20,6 +20,17 @@ func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
     }
     
     return head
+    
+    var isFor = true
+        while isFor {
+            guard let array = readLine()?
+                    .split(separator: " ")
+                    .map({ Int($0) ?? 0 }) else {
+                continue
+            }
+            let value = array[0] + array[1]
+            print(value)
+        }
 }
 
 
